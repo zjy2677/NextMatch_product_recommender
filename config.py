@@ -5,7 +5,7 @@ DEBUG_MODE = False
 
 BASE_DIR = Path(__file__).resolve().parent
 
-STOCK_CSV_PATH = BASE_DIR / "data" / "products_stores_stocks.csv"
+STOCK_CSV_PATH = BASE_DIR / "data" / "products_stores_stocks_sample_FRA.csv"
 
 COUNTRY_TO_CSV = {
     "USA": BASE_DIR / "data" / "catalog_USA.csv",
