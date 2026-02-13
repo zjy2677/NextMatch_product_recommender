@@ -2,7 +2,7 @@
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## Data files
 
 The full dataset (`products_stores_stocks_with_prices.csv`, ~160 MB) is not included in this repository.
