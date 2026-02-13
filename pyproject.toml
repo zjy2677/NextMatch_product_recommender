@@ -7,10 +7,15 @@ name = "nextmatch-product-recommender"
 version = "0.1.0"
 description = "Streamlit-based product recommendation quiz app"
 readme = "README.md"
-requires-python = ">=3.9"
-
+requires-python = ">=3.10"
 dependencies = [
     "streamlit>=1.30",
     "pandas>=1.5",
     "duckdb>=0.9",
 ]
+
+[tool.setuptools]
+packages = ["ui"]
+
+[tool.setuptools.package-data]
+ui = ["**/*"]
