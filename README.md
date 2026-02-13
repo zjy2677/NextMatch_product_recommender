@@ -1,7 +1,16 @@
-## Installation
-
+## Installation & How to use package 
+First we use a gutclone command to download the package.
+```bash
+git clone https://github.com/zjy2677/NextMatch_product_recommender.git
+cd NextMatch_product_recommender
+```
+Then we install the rwquitements.txt
 ```bash
 pip install -r requirements.txt
+```
+Now we can start the streamlit
+```bash
+streamlit run app.py
 ```
 ## Data files
 
