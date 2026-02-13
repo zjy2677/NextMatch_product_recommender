@@ -1,5 +1,11 @@
 ## Installation & How to use package 
-First we use a gutclone command to download the package.
+It is recommended to run this under conda so you may set up using code below
+```bash
+conda create -n nextmatch311 python=3.11 -y
+conda activate nextmatch311
+python -m pip install --upgrade pip
+```
+After environment setup, we use a gitclone command to download the package.
 ```bash
 git clone https://github.com/zjy2677/NextMatch_product_recommender.git
 cd NextMatch_product_recommender
