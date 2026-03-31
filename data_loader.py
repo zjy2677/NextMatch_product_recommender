@@ -27,6 +27,12 @@ def load_csv(path: str) -> pd.DataFrame:
 def get_stock_df() -> pd.DataFrame:
     if UI_ONLY_MODE:
         return mock_stock_df()
+    if not STOCK_CSV_PATH.exists():
+        st.warning(
+            "Stock CSV file was not found in the deployment environment. "
+            "Running in demo mode with mock data."
+        )
+        return mock_stock_df()
     return load_csv(str(STOCK_CSV_PATH))
 
 def get_catalog_df_for_country(country_code: str) -> pd.DataFrame:
@@ -35,4 +41,10 @@ def get_catalog_df_for_country(country_code: str) -> pd.DataFrame:
     path = COUNTRY_TO_CSV.get(country_code)
     if not path:
         raise ValueError(f"No catalog CSV mapped for country: {country_code}")
+    if not path.exists():
+        st.warning(
+            f"Catalog CSV for {country_code} was not found in the deployment environment. "
+            "Running in demo mode with mock customer IDs."
+        )
+        return mock_catalog_df()
     return load_csv(str(path))
