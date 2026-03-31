@@ -18,6 +18,16 @@ Now we can start the streamlit
 ```bash
 streamlit run app.py
 ```
+
+### Streamlit Community Cloud
+
+For Streamlit Community Cloud deployment, set:
+- **Main file path**: `app.py`
+- **Python version**: `3.11`
+- Commit `runtime.txt` with `3.11` at the repository root so Streamlit uses a compatible runtime.
+
+The app now falls back to demo/mock data if CSV files are missing in the cloud runtime, so it can still boot successfully.
+
 ## Data files
 
 The full dataset (`products_stores_stocks_with_prices.csv`, ~160 MB) is not included in this repository.
